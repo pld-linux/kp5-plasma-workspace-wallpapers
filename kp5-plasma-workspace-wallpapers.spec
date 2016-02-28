@@ -1,15 +1,15 @@
-%define		kdeplasmaver	5.4.0
+%define		kdeplasmaver	5.5.4
 %define		qtver		5.3.2
 %define		kpname		plasma-workspace-wallpapers
 
 Summary:	KDE Plasma Workspace Wallpapers
 Name:		kp5-%{kpname}
-Version:	5.4.0
+Version:	5.5.4
 Release:	1
 License:	LGPL v2.1+
 Group:		X11
 Source0:	http://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	8ad2e9423bd01f7302652fe3a79d2484
+# Source0-md5:	996d8eb8b7a0a4ed26d13d09a0038709
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	rpmbuild(macros) >= 1.164
@@ -42,21 +42,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_datadir}/wallpapers/Alps
-%{_datadir}/wallpapers/BlueFlower
-%{_datadir}/wallpapers/Dance_of_the_Spirits
-%{_datadir}/wallpapers/Fog
-%{_datadir}/wallpapers/ForestFog
-%{_datadir}/wallpapers/ForestHouse
-%{_datadir}/wallpapers/GereatHeron
-%{_datadir}/wallpapers/Green_Leaves
+%{_datadir}/wallpapers/Autumn
+%{_datadir}/wallpapers/BytheWater
+%{_datadir}/wallpapers/ColdRipple
+%{_datadir}/wallpapers/ColorfulCups
+%{_datadir}/wallpapers/DarkestHour
+%{_datadir}/wallpapers/EveningGlow
+%{_datadir}/wallpapers/FallenLeaf
+%{_datadir}/wallpapers/FlyingKonqui
 %{_datadir}/wallpapers/Grey
-%{_datadir}/wallpapers/IndianSummer
-%{_datadir}/wallpapers/Landmannalaugar
-%{_datadir}/wallpapers/Poppy
-%{_datadir}/wallpapers/Spray
-%{_datadir}/wallpapers/Sunset
-%{_datadir}/wallpapers/Tauplitz
-%{_datadir}/wallpapers/WalmendingerHorn
-%{_datadir}/wallpapers/Water
-%{_datadir}/wallpapers/Whisker_Grass
+%{_datadir}/wallpapers/Kite
+%{_datadir}/wallpapers/OneStandsOut
+%{_datadir}/wallpapers/PastelHills
+%{_datadir}/wallpapers/Path
