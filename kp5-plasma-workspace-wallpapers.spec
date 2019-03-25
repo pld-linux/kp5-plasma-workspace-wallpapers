@@ -1,17 +1,18 @@
-%define		kdeplasmaver	5.14.4
-%define		qtver		5.3.2
+%define		kdeplasmaver	5.15.3
+%define		qtver		5.9.0
 %define		kpname		plasma-workspace-wallpapers
 
 Summary:	KDE Plasma Workspace Wallpapers
 Name:		kp5-%{kpname}
-Version:	5.14.4
+Version:	5.15.3
 Release:	1
 License:	LGPL v2.1+
 Group:		X11
 Source0:	http://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	5896ef78ebf9b4784ed1fb44c4af1d69
+# Source0-md5:	7006c1d844dd8d23fa6c4e18af645860
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 2.8.12
+BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	xz
 BuildArch:	noarch
@@ -26,16 +27,14 @@ KDE Plasma Workspace Wallpapers.
 %build
 install -d build
 cd build
-%cmake \
+%cmake -G Ninja \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
 	../
-%{__make}
+%ninja_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-%{__make} -C build/ install \
-        DESTDIR=$RPM_BUILD_ROOT
+%ninja_install -C build
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,3 +54,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/wallpapers/OneStandsOut
 %{_datadir}/wallpapers/PastelHills
 %{_datadir}/wallpapers/Path
+%{_datadir}/wallpapers/Canopee
+%{_datadir}/wallpapers/Cascade
+%{_datadir}/wallpapers/Kokkini
+%{_datadir}/wallpapers/Opal
+%{_datadir}/wallpapers/summer_1am
