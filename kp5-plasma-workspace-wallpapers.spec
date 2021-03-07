@@ -1,15 +1,15 @@
-%define		kdeplasmaver	5.15.3
+%define		kdeplasmaver	5.21.2
 %define		qtver		5.9.0
 %define		kpname		plasma-workspace-wallpapers
 
 Summary:	KDE Plasma Workspace Wallpapers
 Name:		kp5-%{kpname}
-Version:	5.15.3
+Version:	5.21.2
 Release:	1
 License:	LGPL v2.1+
 Group:		X11
 Source0:	http://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	7006c1d844dd8d23fa6c4e18af645860
+# Source0-md5:	c0c99781979e2627d5c9721d8b0c34cb
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	ninja
@@ -29,6 +29,7 @@ install -d build
 cd build
 %cmake -G Ninja \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+	-DHTML_INSTALL_DIR=%{_kdedocdir} \
 	../
 %ninja_build
 
@@ -59,3 +60,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/wallpapers/Kokkini
 %{_datadir}/wallpapers/Opal
 %{_datadir}/wallpapers/summer_1am
+%{_datadir}/wallpapers/Cluster
+%{_datadir}/wallpapers/Elarun
+%{_datadir}/wallpapers/SafeLanding
+%{_datadir}/wallpapers/Flow
+%{_datadir}/wallpapers/IceCold
+%{_datadir}/wallpapers/Shell
+%{_datadir}/wallpapers/Volna
