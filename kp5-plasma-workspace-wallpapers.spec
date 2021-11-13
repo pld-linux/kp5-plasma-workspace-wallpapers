@@ -1,15 +1,15 @@
-%define		kdeplasmaver	5.23.2
+%define		kdeplasmaver	5.23.3
 %define		qtver		5.9.0
 %define		kpname		plasma-workspace-wallpapers
 
 Summary:	KDE Plasma Workspace Wallpapers
 Name:		kp5-%{kpname}
-Version:	5.23.2
+Version:	5.23.3
 Release:	1
 License:	LGPL v2.1+
 Group:		X11
 Source0:	http://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	7a38f0efb0c808b3be7041c676038c4d
+# Source0-md5:	581f66591f0792b38d89d2fab1600d41
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	ninja
