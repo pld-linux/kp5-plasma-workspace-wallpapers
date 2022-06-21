@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	5.25.0
+%define		kdeplasmaver	5.25.1
 %define		qtver		5.9.0
 %define		kpname		plasma-workspace-wallpapers
 
 Summary:	KDE Plasma Workspace Wallpapers
 Name:		kp5-%{kpname}
-Version:	5.25.0
+Version:	5.25.1
 Release:	1
 License:	LGPL v2.1+
 Group:		X11
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	e2c18da62d6b384b1746d59d19bf9b63
+# Source0-md5:	ca40b77c0ffff80f11be8c5aba444df5
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	ninja
@@ -70,7 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/wallpapers/summer_1am
 %{_datadir}/wallpapers/Cluster
 %{_datadir}/wallpapers/Elarun
-%{_datadir}/wallpapers/SafeLanding
 %{_datadir}/wallpapers/Flow
 %{_datadir}/wallpapers/IceCold
 %{_datadir}/wallpapers/Shell
