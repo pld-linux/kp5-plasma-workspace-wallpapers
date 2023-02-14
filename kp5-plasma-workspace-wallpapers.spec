@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	5.26.5
+%define		kdeplasmaver	5.27.0
 %define		qtver		5.15.2
 %define		kpname		plasma-workspace-wallpapers
 
 Summary:	KDE Plasma Workspace Wallpapers
 Name:		kp5-%{kpname}
-Version:	5.26.5
+Version:	5.27.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	5112039742fa249c6272196fd2ea9b8c
+# Source0-md5:	ea18688bcb2f6a5e68bd24653288ea18
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	ninja
@@ -79,3 +79,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/wallpapers/Patak
 %{_datadir}/wallpapers/Honeywave
 %{_datadir}/wallpapers/SafeLanding
+%{_datadir}/wallpapers/Kay
